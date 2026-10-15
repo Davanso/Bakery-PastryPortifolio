@@ -1,5 +1,5 @@
 export const profile = {
-  name: 'Baking & Pastry Portfolio',
+  name: 'Bianca Melikardi',
   professionalName: 'Bianca Melikardi',
   // Fill these with confirmed professional details. Empty fields hide their links.
   email: 'biancamelikardi2323@gmail.com',

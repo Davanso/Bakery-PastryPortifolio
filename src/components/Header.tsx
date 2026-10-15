@@ -1,12 +1,15 @@
+import { profile } from '@/data/profile';
+
 export function Header() {
   return (
     <header id="top" className="header shell">
-      <a className="brand" href="#top" aria-label="Baking and pastry portfolio home">
+      <a className="brand" href="#top" aria-label={`${profile.name} portfolio home`}>
         <span className="brand-mark" aria-hidden="true">
-          b<span>&</span>p
+          b<span>&</span>m
         </span>
         <span>
-          Baking & Pastry<span className="brand-sub">PORTFOLIO</span>
+          {profile.name}
+          <span className="brand-sub">PORTFOLIO</span>
         </span>
       </a>
       <nav aria-label="Main navigation">
