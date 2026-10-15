@@ -25,7 +25,7 @@ Generated Next.js files, build outputs and dependencies are ignored. Commands in
 
 ## Add real work
 
-The catalogue is intentionally empty until original photographs are available. The hero uses a decorative CSS illustration, not a photograph of claimed work. No stock or generated product photographs are included.
+The catalogue contains eight original photographs, with optimised WebP copies alongside the unchanged source files. The hero uses a decorative CSS illustration. No stock or generated product photographs are included.
 
 1. Place real images in `public/images/brownies/`, `cakes/`, `puddings/`, `sweets/` or `other/`. Prefer descriptive English filenames and compressed WebP/AVIF images.
 2. Add an entry to `src/data/desserts.ts`:

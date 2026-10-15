@@ -28,7 +28,7 @@ export function Hero() {
           </div>
         </div>
         <span className="art-word">the sweeter details</span>
-        <span className="art-note">An original collection, in the making.</span>
+        <span className="art-note">A collection of bakes and finishing touches.</span>
       </div>
     </section>
   );
