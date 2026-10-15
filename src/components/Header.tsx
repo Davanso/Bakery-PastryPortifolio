@@ -1,4 +1,5 @@
 import { profile } from '@/data/profile';
+import { ArrowUpRight } from 'lucide-react';
 
 export function Header() {
   return (
@@ -15,7 +16,7 @@ export function Header() {
       <nav aria-label="Main navigation">
         <a href="#work">The collection</a>
         <a href="#about">
-          About & contact <span aria-hidden="true">↗</span>
+          About & contact <ArrowUpRight size={16} aria-hidden="true" />
         </a>
       </nav>
     </header>

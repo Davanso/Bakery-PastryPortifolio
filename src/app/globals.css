@@ -259,8 +259,8 @@ h2 {
   bottom: 12px;
   right: 12px;
   background: var(--cream);
-  width: 32px;
-  height: 32px;
+  width: 44px;
+  height: 44px;
   display: grid;
   place-items: center;
 }
@@ -336,11 +336,37 @@ h2 {
   flex-wrap: wrap;
 }
 .text-link {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  max-width: 100%;
   border-bottom: 1px solid var(--ink);
   color: var(--ink);
   padding-bottom: 4px;
   margin-top: 12px;
+}
+.lucide {
+  flex-shrink: 0;
+}
+.header nav a,
+.footer > a,
+.lightbox button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+}
+.lightbox-top button {
+  min-width: 44px;
+}
+.empty-emblem {
+  display: flex;
+  justify-content: center;
+}
+.divider > svg {
+  color: var(--olive);
 }
 .footer {
   display: flex;

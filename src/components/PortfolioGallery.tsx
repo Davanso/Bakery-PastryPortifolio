@@ -2,6 +2,7 @@
 
 import { useRef, useState } from 'react';
 import Image from 'next/image';
+import { ArrowLeft, ArrowRight, Asterisk, X } from 'lucide-react';
 import { desserts } from '@/data/desserts';
 import type { Category, Dessert } from '@/types/dessert';
 import { categories, categoryLabels } from '@/types/dessert';
@@ -65,7 +66,7 @@ export function PortfolioGallery() {
       ) : (
         <div className="empty-collection">
           <span className="empty-emblem" aria-hidden="true">
-            ✳
+            <Asterisk size={38} />
           </span>
           <p className="eyebrow">SOMETHING GOOD IS ON ITS WAY</p>
           <h3>The collection is taking shape.</h3>
@@ -85,7 +86,7 @@ export function PortfolioGallery() {
         <div className="lightbox-top">
           <h3 id="photo-title">{selected?.name}</h3>
           <button onClick={() => dialog.current?.close()} aria-label="Close photos">
-            ✕
+            <X size={22} aria-hidden="true" />
           </button>
         </div>
         {selected && (
@@ -103,12 +104,14 @@ export function PortfolioGallery() {
             {photos.length > 1 && (
               <div className="photo-controls">
                 <button onClick={() => setPhoto((photo + photos.length - 1) % photos.length)}>
-                  ← Previous
+                  <ArrowLeft size={18} aria-hidden="true" /> Previous
                 </button>
                 <span aria-live="polite">
                   {photo + 1} / {photos.length}
                 </span>
-                <button onClick={() => setPhoto((photo + 1) % photos.length)}>Next →</button>
+                <button onClick={() => setPhoto((photo + 1) % photos.length)}>
+                  Next <ArrowRight size={18} aria-hidden="true" />
+                </button>
               </div>
             )}
           </>

@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { ArrowUpRight } from 'lucide-react';
 
 export function Hero() {
   return (
@@ -14,7 +15,7 @@ export function Hero() {
           something special.
         </p>
         <a className="button" href="#work">
-          View my work <span aria-hidden="true">↗</span>
+          View my work <ArrowUpRight size={20} aria-hidden="true" />
         </a>
         <p className="hero-note">Made with care. Shared with pride.</p>
       </div>

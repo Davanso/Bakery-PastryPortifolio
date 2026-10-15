@@ -1,4 +1,5 @@
 import { profile } from '@/data/profile';
+import { ArrowUp, ArrowUpRight, Mail, Phone } from 'lucide-react';
 export function Footer() {
   return (
     <>
@@ -22,12 +23,14 @@ export function Footer() {
               <div className="contact-links">
                 {profile.email && (
                   <a className="text-link" href={`mailto:${profile.email}`}>
-                    {profile.email} ↗
+                    <Mail size={18} aria-hidden="true" />
+                    <span>{profile.email}</span>
                   </a>
                 )}
                 {profile.phone && (
                   <a className="text-link" href={`tel:${profile.phoneHref}`}>
-                    {profile.phone}
+                    <Phone size={18} aria-hidden="true" />
+                    <span>{profile.phone}</span>
                   </a>
                 )}
                 {profile.linkedin && (
@@ -37,7 +40,7 @@ export function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    LinkedIn ↗
+                    LinkedIn <ArrowUpRight size={18} aria-hidden="true" />
                   </a>
                 )}
               </div>
@@ -53,7 +56,9 @@ export function Footer() {
       <footer className="footer shell">
         <span>{profile.name}</span>
         <span>Baked with care. Presented with love.</span>
-        <a href="#top">Back to top ↑</a>
+        <a href="#top">
+          Back to top <ArrowUp size={18} aria-hidden="true" />
+        </a>
       </footer>
     </>
   );
