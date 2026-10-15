@@ -21,7 +21,11 @@ export function DessertCard({ dessert, onOpen }: { dessert: Dessert; onOpen: () 
           <Expand size={20} />
         </span>
       </button>
-      <p className="eyebrow card-category">{categoryLabels[dessert.category]}</p>
+      <p className="eyebrow card-category">
+        {dessert.group === 'celebration-cakes'
+          ? 'Celebration Cakes'
+          : categoryLabels[dessert.category]}
+      </p>
       <h3>{dessert.name}</h3>
       <p>{dessert.description}</p>
     </article>

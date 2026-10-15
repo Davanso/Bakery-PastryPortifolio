@@ -21,8 +21,8 @@ export function Hero() {
       </div>
       <div className="hero-art">
         <Image
-          src="/images/myself/myself.webp"
-          alt="Bianca Melikardi in a chef's jacket, holding a whisk behind a glazed cake in the kitchen"
+          src="/images/myself/bia-bolo.webp"
+          alt="Bianca Melikardi in a chef's jacket holding a whisk behind a heart-shaped cake"
           fill
           sizes="(max-width: 639px) 100vw, 50vw"
           preload

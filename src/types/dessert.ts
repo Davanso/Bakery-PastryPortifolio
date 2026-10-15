@@ -13,6 +13,7 @@ export type Dessert = {
   name: string;
   description: string;
   category: Category;
+  group?: 'celebration-cakes';
   coverImage: string;
   images?: string[];
   alt: string;

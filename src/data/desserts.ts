@@ -2,6 +2,36 @@ import type { Dessert } from '@/types/dessert';
 
 export const desserts: Dessert[] = [
   {
+    id: 'barbie-celebration-cake',
+    name: 'Barbie Celebration Cake',
+    description:
+      'A pink birthday cake with a Barbie topper, butterflies, stars and decorative spheres.',
+    category: 'cakes',
+    group: 'celebration-cakes',
+    coverImage: '/images/cakes/barbie-cake.webp',
+    alt: 'Pink Barbie birthday cake decorated with butterflies, stars and pink and gold spheres',
+  },
+  {
+    id: 'paw-patrol-celebration-cake',
+    name: 'Paw Patrol Celebration Cake',
+    description:
+      'A colourful birthday cake with Paw Patrol characters, paw prints and a balloon topper.',
+    category: 'cakes',
+    group: 'celebration-cakes',
+    coverImage: '/images/cakes/dog-patrol-cake.webp',
+    alt: 'Blue, yellow and red Paw Patrol birthday cake with character toppers and colourful balloons',
+  },
+  {
+    id: 'childrens-celebration-cake',
+    name: 'Children’s Celebration Cake',
+    description:
+      'A colourful birthday cake with piped frosting, character toppers, butterflies and balloons.',
+    category: 'cakes',
+    group: 'celebration-cakes',
+    coverImage: '/images/cakes/child-cake.webp',
+    alt: 'Children’s birthday cake with turquoise and pink piped frosting, character toppers and balloons',
+  },
+  {
     id: 'lemon-cake',
     name: 'Lemon Cake',
     description: 'A ring cake finished with a white glaze, lemon zest and blueberries.',
@@ -19,6 +49,7 @@ export const desserts: Dessert[] = [
   },
   {
     id: 'toy-story-celebration-cake',
+    group: 'celebration-cakes',
     name: 'Toy Story Celebration Cake',
     description: 'A colourful two-tier celebration cake with Toy Story character decorations.',
     category: 'cakes',
@@ -103,6 +134,7 @@ export const desserts: Dessert[] = [
   },
   {
     id: 'sicilian-lemon-cake',
+    group: 'celebration-cakes',
     name: 'Sicilian Lemon Cake',
     description:
       'A frosted celebration cake with piped details and a colourful fresh-fruit topping.',

@@ -16,7 +16,11 @@ export function PortfolioGallery() {
   const available = categories.filter((value) => desserts.some((item) => item.category === value));
   const filtered = desserts
     .filter((item) => category === 'all' || category === item.category)
-    .sort((a, b) => categories.indexOf(a.category) - categories.indexOf(b.category));
+    .sort(
+      (a, b) =>
+        categories.indexOf(a.category) - categories.indexOf(b.category) ||
+        Number(b.group === 'celebration-cakes') - Number(a.group === 'celebration-cakes'),
+    );
   const photos = selected
     ? Array.from(new Set([selected.coverImage, ...(selected.images ?? [])]))
     : [];
