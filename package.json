@@ -6,8 +6,13 @@
     "dev": "node node_modules/next/dist/bin/next dev",
     "build": "node node_modules/next/dist/bin/next build",
     "start": "node node_modules/next/dist/bin/next start",
-    "lint": "node node_modules/eslint/bin/eslint.js .",
-    "typecheck": "node node_modules/typescript/bin/tsc --noEmit"
+    "lint": "npm run lint:ox && npm run lint:eslint",
+    "lint:ox": "node node_modules/oxlint/bin/oxlint --config oxlint.config.mjs .",
+    "lint:eslint": "node node_modules/eslint/bin/eslint.js . --max-warnings 0",
+    "lint:fix": "npm run lint:ox -- --fix && npm run lint:eslint -- --fix",
+    "typecheck": "node node_modules/typescript/bin/tsc --noEmit",
+    "fmt": "node node_modules/oxfmt/bin/oxfmt --config oxfmt.config.mjs --write .",
+    "fmt:check": "node node_modules/oxfmt/bin/oxfmt --config oxfmt.config.mjs --check ."
   },
   "dependencies": {
     "next": "^16.4.2",
@@ -22,6 +27,8 @@
     "eslint": "^9.39.5",
     "eslint-config-next": "^16.4.2",
     "tailwindcss": "^4.3.3",
-    "typescript": "^6.0.3"
+    "typescript": "^6.0.3",
+    "oxlint": "1.69.0",
+    "oxfmt": "0.54.0"
   }
 }

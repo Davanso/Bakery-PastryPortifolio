@@ -13,6 +13,16 @@ npm run dev
 
 Open http://localhost:3000. Validate with `npm run lint`, `npm run typecheck` and `npm run build`.
 
+## Lint and formatting
+
+- `npm run lint`: runs Oxlint, then the Next.js ESLint checks (including React Hooks). Warnings fail the check.
+- `npm run lint:ox`: runs only Oxlint with `oxlint.config.mjs`.
+- `npm run lint:fix`: applies automatic lint fixes.
+- `npm run fmt`: formats files with Oxfmt using `oxfmt.config.mjs`.
+- `npm run fmt:check`: checks formatting without changing files.
+
+Generated Next.js files, build outputs and dependencies are ignored. Commands invoke the tools through Node to support Windows paths containing `&`.
+
 ## Add real work
 
 The catalogue is intentionally empty until original photographs are available. The hero uses a decorative CSS illustration, not a photograph of claimed work. No stock or generated product photographs are included.
