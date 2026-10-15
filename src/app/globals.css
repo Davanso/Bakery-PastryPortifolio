@@ -375,6 +375,19 @@ h2 {
   font-size: 14px;
   line-height: 1.9;
 }
+.professional-contact {
+  margin-top: 24px;
+  font-style: normal;
+}
+.contact-name {
+  margin-bottom: 0;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 25px;
+}
+.professional-contact .text-link {
+  overflow-wrap: anywhere;
+}
 .contact-pending {
   font-size: 11px;
   margin-top: 24px;
