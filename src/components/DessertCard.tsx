@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import type { Dessert } from '@/types/dessert';
+import { categoryLabels } from '@/types/dessert';
 
 export function DessertCard({ dessert, onOpen }: { dessert: Dessert; onOpen: () => void }) {
   return (
@@ -19,7 +20,7 @@ export function DessertCard({ dessert, onOpen }: { dessert: Dessert; onOpen: () 
           ↗
         </span>
       </button>
-      <p className="eyebrow card-category">{dessert.category}</p>
+      <p className="eyebrow card-category">{categoryLabels[dessert.category]}</p>
       <h3>{dessert.name}</h3>
       <p>{dessert.description}</p>
     </article>

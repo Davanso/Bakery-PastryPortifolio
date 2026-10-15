@@ -150,7 +150,7 @@ em {
   letter-spacing: 0.6px;
 }
 .hero-art {
-  min-height: 474px;
+  height: 474px;
   background: var(--sand);
   position: relative;
   display: flex;
@@ -160,68 +160,6 @@ em {
   border-radius: 48% 48% 3px 3px;
   padding: 35px 12px 28px;
   overflow: hidden;
-}
-.art-caption {
-  font-size: 9px;
-  letter-spacing: 3px;
-  color: #655d4c;
-  margin-bottom: 25px;
-}
-.plate {
-  width: 260px;
-  height: 260px;
-  border-radius: 50%;
-  background: #f3eddf;
-  border: 1px solid #c9bea6;
-  box-shadow:
-    inset 0 0 0 15px #e6ddca,
-    inset 0 0 0 17px #d2c8b1,
-    5px 15px 20px #7d6a4620;
-  display: grid;
-  place-items: center;
-  transform: rotate(-22deg);
-}
-.pastry {
-  width: 152px;
-  height: 90px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1px;
-}
-.pastry i {
-  display: block;
-  width: 26px;
-  height: 64px;
-  background: linear-gradient(90deg, #a57139, #d9aa65 48%, #b78545);
-  border-radius: 60% 38% 45% 55%;
-  box-shadow: 2px 3px 2px #78522d33;
-  transform: rotate(8deg);
-}
-.pastry i:nth-child(2),
-.pastry i:nth-child(4) {
-  height: 88px;
-  width: 31px;
-}
-.pastry i:nth-child(3) {
-  height: 103px;
-  width: 38px;
-}
-.pastry i:first-child {
-  transform: rotate(-18deg) translateY(11px);
-}
-.pastry i:last-child {
-  transform: rotate(27deg) translateY(11px);
-}
-.art-word {
-  font: italic 32px var(--serif);
-  margin-top: 25px;
-}
-.art-note {
-  font-size: 9px;
-  letter-spacing: 0.7px;
-  margin-top: 10px;
-  color: var(--muted);
 }
 .divider {
   display: flex;
@@ -490,7 +428,7 @@ h2 {
     gap: 100px;
   }
   .hero-art {
-    min-height: 510px;
+    height: 510px;
   }
 }
 @media (max-width: 959px) {
@@ -501,11 +439,7 @@ h2 {
     gap: 30px;
   }
   .hero-art {
-    min-height: 410px;
-  }
-  .plate {
-    width: 220px;
-    height: 220px;
+    height: 410px;
   }
   h1 {
     font-size: 64px;
@@ -562,17 +496,10 @@ h2 {
     max-width: 330px;
   }
   .hero-art {
-    min-height: 390px;
+    height: 390px;
     width: 100%;
     max-width: 380px;
     justify-self: center;
-  }
-  .plate {
-    width: 215px;
-    height: 215px;
-  }
-  .art-word {
-    font-size: 29px;
   }
   .divider {
     gap: 14px;

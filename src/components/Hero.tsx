@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export function Hero() {
   return (
     <section className="hero shell" aria-labelledby="hero-title">
@@ -16,19 +18,15 @@ export function Hero() {
         </a>
         <p className="hero-note">Made with care. Shared with pride.</p>
       </div>
-      <div className="hero-art" aria-hidden="true">
-        <div className="art-caption">FROM THE KITCHEN</div>
-        <div className="plate">
-          <div className="pastry">
-            <i />
-            <i />
-            <i />
-            <i />
-            <i />
-          </div>
-        </div>
-        <span className="art-word">the sweeter details</span>
-        <span className="art-note">A collection of bakes and finishing touches.</span>
+      <div className="hero-art">
+        <Image
+          src="/images/myself/myself.webp"
+          alt="Bianca Melikardi in a chef's jacket, holding a whisk behind a glazed cake in the kitchen"
+          fill
+          sizes="(max-width: 639px) 100vw, 50vw"
+          preload
+          style={{ objectFit: 'cover' }}
+        />
       </div>
     </section>
   );

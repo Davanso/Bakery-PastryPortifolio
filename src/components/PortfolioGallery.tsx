@@ -4,6 +4,7 @@ import { useRef, useState } from 'react';
 import Image from 'next/image';
 import { desserts } from '@/data/desserts';
 import type { Category, Dessert } from '@/types/dessert';
+import { categories, categoryLabels } from '@/types/dessert';
 import { DessertCard } from './DessertCard';
 
 export function PortfolioGallery() {
@@ -11,8 +12,10 @@ export function PortfolioGallery() {
   const [selected, setSelected] = useState<Dessert | null>(null);
   const [photo, setPhoto] = useState(0);
   const dialog = useRef<HTMLDialogElement>(null);
-  const available = Array.from(new Set(desserts.map((item) => item.category)));
-  const filtered = desserts.filter((item) => category === 'all' || category === item.category);
+  const available = categories.filter((value) => desserts.some((item) => item.category === value));
+  const filtered = desserts
+    .filter((item) => category === 'all' || category === item.category)
+    .sort((a, b) => categories.indexOf(a.category) - categories.indexOf(b.category));
   const photos = selected
     ? Array.from(new Set([selected.coverImage, ...(selected.images ?? [])]))
     : [];
@@ -43,7 +46,7 @@ export function PortfolioGallery() {
               aria-pressed={category === value}
               onClick={() => setCategory(value)}
             >
-              {value === 'all' ? 'All work' : value}
+              {value === 'all' ? 'All work' : categoryLabels[value]}
             </button>
           ))}
         </div>
